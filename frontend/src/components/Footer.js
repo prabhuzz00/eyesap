@@ -26,17 +26,20 @@ export default function Footer() {
               <img
                 src="https://customer-assets.emergentagent.com/job_eyesap-consulting/artifacts/uooqvbnr_Picsart_26-04-05_14-15-21-768.png"
                 alt="EYESAP Technology"
-                className="h-16 w-auto"
+                className="h-24 w-auto"
               />
             </div>
             <p className="text-slate-400 text-sm font-body leading-relaxed max-w-xs">
-              Empowering Futures Through IT Excellence. Your trusted partner for SAP implementation, staffing, and training.
+              Empowering Futures Through IT Excellence. Your trusted partner for
+              SAP implementation, staffing, and training.
             </p>
           </div>
 
           {/* Services */}
           <div>
-            <h4 className="font-heading font-bold text-sm uppercase tracking-[0.15em] text-[#1ab69e] mb-6">Services</h4>
+            <h4 className="font-heading font-bold text-sm uppercase tracking-[0.15em] text-[#1ab69e] mb-6">
+              Services
+            </h4>
             <ul className="space-y-3">
               {footerLinks.services.map((link) => (
                 <li key={link.path}>
@@ -55,7 +58,9 @@ export default function Footer() {
 
           {/* Company */}
           <div>
-            <h4 className="font-heading font-bold text-sm uppercase tracking-[0.15em] text-[#1ab69e] mb-6">Company</h4>
+            <h4 className="font-heading font-bold text-sm uppercase tracking-[0.15em] text-[#1ab69e] mb-6">
+              Company
+            </h4>
             <ul className="space-y-3">
               {footerLinks.company.map((link) => (
                 <li key={link.path}>
@@ -74,15 +79,21 @@ export default function Footer() {
 
           {/* Contact */}
           <div>
-            <h4 className="font-heading font-bold text-sm uppercase tracking-[0.15em] text-[#1ab69e] mb-6">Contact</h4>
+            <h4 className="font-heading font-bold text-sm uppercase tracking-[0.15em] text-[#1ab69e] mb-6">
+              Contact
+            </h4>
             <ul className="space-y-4">
               <li className="flex items-start gap-3">
                 <Mail className="w-4 h-4 text-[#1ab69e] mt-0.5 shrink-0" />
-                <span className="text-slate-400 text-sm font-body">info@eyesaptechnology.com</span>
+                <span className="text-slate-400 text-sm font-body">
+                  info@eyesaptechnology.com
+                </span>
               </li>
               <li className="flex items-start gap-3">
                 <Phone className="w-4 h-4 text-[#1ab69e] mt-0.5 shrink-0" />
-                <span className="text-slate-400 text-sm font-body">+91-XXXX-XXXXXX</span>
+                <span className="text-slate-400 text-sm font-body">
+                  +91-XXXX-XXXXXX
+                </span>
               </li>
               <li className="flex items-start gap-3">
                 <MapPin className="w-4 h-4 text-[#1ab69e] mt-0.5 shrink-0" />
@@ -95,17 +106,23 @@ export default function Footer() {
         {/* Bottom */}
         <div className="border-t border-slate-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-slate-500 text-xs font-body">
-            &copy; {new Date().getFullYear()} EYESAP Technology. All rights reserved.
+            &copy; {new Date().getFullYear()} EYESAP Technology. All rights
+            reserved.
           </p>
           <div className="flex gap-6">
-            <Link to="/privacy-policy" className="text-slate-500 hover:text-slate-300 text-xs font-body transition-colors" data-testid="footer-privacy-link">
+            <Link
+              to="/privacy-policy"
+              className="text-slate-500 hover:text-slate-300 text-xs font-body transition-colors"
+              data-testid="footer-privacy-link"
+            >
               Privacy Policy
             </Link>
-            <Link to="/terms" className="text-slate-500 hover:text-slate-300 text-xs font-body transition-colors" data-testid="footer-terms-link">
+            <Link
+              to="/terms"
+              className="text-slate-500 hover:text-slate-300 text-xs font-body transition-colors"
+              data-testid="footer-terms-link"
+            >
               Terms & Conditions
-            </Link>
-            <Link to="/admin/login" className="text-slate-500 hover:text-slate-300 text-xs font-body transition-colors" data-testid="footer-admin-link">
-              Admin
             </Link>
           </div>
         </div>

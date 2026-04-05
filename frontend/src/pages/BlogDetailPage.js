@@ -27,7 +27,11 @@ export default function BlogDetailPage() {
 
   const formatDate = (dateStr) => {
     try {
-      return new Date(dateStr).toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" });
+      return new Date(dateStr).toLocaleDateString("en-US", {
+        year: "numeric",
+        month: "long",
+        day: "numeric",
+      });
     } catch {
       return dateStr;
     }
@@ -54,8 +58,13 @@ export default function BlogDetailPage() {
     return (
       <div className="min-h-screen pt-32 pb-20 text-center">
         <div className="max-w-3xl mx-auto px-6">
-          <h1 className="font-heading font-bold text-2xl text-[#0F172A]">Blog not found</h1>
-          <Link to="/blogs" className="text-[#1ab69e] font-body mt-4 inline-block hover:underline">
+          <h1 className="font-heading font-bold text-2xl text-[#0F172A]">
+            Blog not found
+          </h1>
+          <Link
+            to="/blogs"
+            className="text-[#1ab69e] font-body mt-4 inline-block hover:underline"
+          >
             <ArrowLeft className="w-4 h-4 inline mr-2" /> Back to Blogs
           </Link>
         </div>
@@ -67,30 +76,51 @@ export default function BlogDetailPage() {
     <div data-testid="blog-detail-page">
       {/* Hero */}
       {blog.cover_image && (
-        <section className="relative pt-20 h-[40vh] min-h-[320px] overflow-hidden">
-          <img src={blog.cover_image} alt={blog.title} className="w-full h-full object-cover" />
+        <section className="relative -mt-20 h-[50vh] min-h-[400px] overflow-hidden">
+          <img
+            src={blog.cover_image}
+            alt={blog.title}
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-black/30" />
           <div className="absolute inset-0 bg-gradient-to-t from-[#0F172A] via-[#0F172A]/40 to-transparent" />
         </section>
       )}
 
-      <section className={`${blog.cover_image ? "-mt-24 relative" : "pt-32"} pb-20`}>
-        <div className="max-w-3xl mx-auto px-6 md:px-12">
-          <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
-            <Link to="/blogs" className="text-[#1ab69e] font-body text-sm hover:underline flex items-center gap-1 mb-6" data-testid="back-to-blogs">
+      <section
+        className={`${blog.cover_image ? "-mt-32 relative bg-white" : "pt-32 bg-white"} pb-20`}
+      >
+        <div className="max-w-3xl mx-auto px-6 md:px-12 pt-12">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+          >
+            <Link
+              to="/blogs"
+              className="text-[#1ab69e] font-body text-sm hover:underline flex items-center gap-1 mb-6"
+              data-testid="back-to-blogs"
+            >
               <ArrowLeft className="w-4 h-4" /> Back to Blogs
             </Link>
 
             {blog.tags && blog.tags.length > 0 && (
               <div className="flex flex-wrap gap-2 mb-4">
                 {blog.tags.map((tag, i) => (
-                  <span key={i} className="text-[10px] uppercase tracking-wider font-bold text-[#1ab69e] bg-[#f0fdfa] px-3 py-1 rounded-full flex items-center gap-1">
+                  <span
+                    key={i}
+                    className="text-[10px] uppercase tracking-wider font-bold text-[#1ab69e] bg-[#f0fdfa] px-3 py-1 rounded-full flex items-center gap-1"
+                  >
                     <Tag className="w-3 h-3" /> {tag}
                   </span>
                 ))}
               </div>
             )}
 
-            <h1 className="font-heading font-black text-3xl sm:text-4xl lg:text-5xl text-[#0F172A] tracking-tighter" data-testid="blog-detail-title">
+            <h1
+              className="font-heading font-bold text-3xl sm:text-4xl lg:text-5xl text-[#0F172A] tracking-[0.01em] leading-[1.2]"
+              data-testid="blog-detail-title"
+            >
               {blog.title}
             </h1>
 

@@ -8,12 +8,13 @@ import { Button } from "../components/ui/button";
 const navLinks = [
   { label: "Home", path: "/" },
   {
-    label: "Services", path: "#",
+    label: "Services",
+    path: "#",
     children: [
       { label: "SAP Implementation", path: "/sap-implementation" },
       { label: "SAP Staffing & Resourcing", path: "/sap-staffing" },
       { label: "SAP Training", path: "/sap-training" },
-    ]
+    ],
   },
   { label: "About Us", path: "/about" },
   { label: "Blogs", path: "/blogs" },
@@ -33,7 +34,10 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  useEffect(() => { setMobileOpen(false); setServicesOpen(false); }, [location]);
+  useEffect(() => {
+    setMobileOpen(false);
+    setServicesOpen(false);
+  }, [location]);
 
   const isActive = (path) => location.pathname === path;
   const isHeroPage = !scrolled;
@@ -58,21 +62,27 @@ export default function Navbar() {
             <img
               src="https://customer-assets.emergentagent.com/job_eyesap-consulting/artifacts/uooqvbnr_Picsart_26-04-05_14-15-21-768.png"
               alt="EYESAP Technology"
-              className="h-14 w-auto"
-              style={{ mixBlendMode: 'screen' }}
+              className="h-20 w-auto"
             />
           </Link>
 
           {/* Desktop Nav */}
-          <nav className="hidden lg:flex items-center gap-1" data-testid="desktop-nav">
-            {navLinks.map((link) => (
+          <nav
+            className="hidden lg:flex items-center gap-1"
+            data-testid="desktop-nav"
+          >
+            {navLinks.map((link) =>
               link.children ? (
                 <div key={link.label} className="relative group">
                   <button
                     className={`flex items-center gap-1 px-4 py-2 text-sm font-body font-medium transition-colors rounded-lg ${
                       isTransparent ? "hover:bg-white/10" : "hover:bg-[#f0fdfa]"
                     } ${
-                      link.children.some(c => isActive(c.path)) ? "text-[#1ab69e]" : isTransparent ? "text-white" : "text-[#334155]"
+                      link.children.some((c) => isActive(c.path))
+                        ? "text-[#1ab69e]"
+                        : isTransparent
+                          ? "text-white"
+                          : "text-[#334155]"
                     }`}
                     data-testid="services-dropdown"
                   >
@@ -105,14 +115,18 @@ export default function Navbar() {
                   className={`px-4 py-2 text-sm font-body font-medium transition-colors rounded-lg ${
                     isTransparent ? "hover:bg-white/10" : "hover:bg-[#f0fdfa]"
                   } ${
-                    isActive(link.path) ? "text-[#1ab69e]" : isTransparent ? "text-white" : "text-[#334155]"
+                    isActive(link.path)
+                      ? "text-[#1ab69e]"
+                      : isTransparent
+                        ? "text-white"
+                        : "text-[#334155]"
                   }`}
                   data-testid={`nav-${link.path === "/" ? "home" : link.path.slice(1)}`}
                 >
                   {link.label}
                 </Link>
-              )
-            ))}
+              ),
+            )}
           </nav>
 
           {/* CTA + Mobile */}
@@ -129,8 +143,13 @@ export default function Navbar() {
             {/* Mobile Menu */}
             <Sheet open={mobileOpen} onOpenChange={setMobileOpen}>
               <SheetTrigger asChild className="lg:hidden">
-                <button className={`p-2 rounded-lg ${isTransparent ? "hover:bg-white/10" : "hover:bg-slate-100"}`} data-testid="mobile-menu-toggle">
-                  <Menu className={`w-6 h-6 ${isTransparent ? "text-white" : "text-[#0F172A]"}`} />
+                <button
+                  className={`p-2 rounded-lg ${isTransparent ? "hover:bg-white/10" : "hover:bg-slate-100"}`}
+                  data-testid="mobile-menu-toggle"
+                >
+                  <Menu
+                    className={`w-6 h-6 ${isTransparent ? "text-white" : "text-[#0F172A]"}`}
+                  />
                 </button>
               </SheetTrigger>
               <SheetContent side="right" className="w-80 bg-white p-0">
@@ -139,11 +158,11 @@ export default function Navbar() {
                     <img
                       src="https://customer-assets.emergentagent.com/job_eyesap-consulting/artifacts/uooqvbnr_Picsart_26-04-05_14-15-21-768.png"
                       alt="EYESAP Technology"
-                      className="h-14 w-auto"
+                      className="h-20 w-auto"
                     />
                   </div>
                   <nav className="space-y-1">
-                    {navLinks.map((link) => (
+                    {navLinks.map((link) =>
                       link.children ? (
                         <div key={link.label}>
                           <button
@@ -152,7 +171,9 @@ export default function Navbar() {
                             data-testid="mobile-services-dropdown"
                           >
                             {link.label}
-                            <ChevronDown className={`w-4 h-4 transition-transform ${servicesOpen ? "rotate-180" : ""}`} />
+                            <ChevronDown
+                              className={`w-4 h-4 transition-transform ${servicesOpen ? "rotate-180" : ""}`}
+                            />
                           </button>
                           <AnimatePresence>
                             {servicesOpen && (
@@ -167,7 +188,9 @@ export default function Navbar() {
                                     key={child.path}
                                     to={child.path}
                                     className={`block px-4 py-2.5 text-sm rounded-lg ${
-                                      isActive(child.path) ? "text-[#1ab69e] font-semibold bg-[#f0fdfa]" : "text-[#64748B] hover:text-[#1ab69e]"
+                                      isActive(child.path)
+                                        ? "text-[#1ab69e] font-semibold bg-[#f0fdfa]"
+                                        : "text-[#64748B] hover:text-[#1ab69e]"
                                     }`}
                                     data-testid={`mobile-nav-${child.path.slice(1)}`}
                                   >
@@ -183,17 +206,22 @@ export default function Navbar() {
                           key={link.path}
                           to={link.path}
                           className={`block px-4 py-3 text-sm font-medium rounded-lg ${
-                            isActive(link.path) ? "text-[#1ab69e] bg-[#f0fdfa]" : "text-[#334155] hover:bg-[#f0fdfa]"
+                            isActive(link.path)
+                              ? "text-[#1ab69e] bg-[#f0fdfa]"
+                              : "text-[#334155] hover:bg-[#f0fdfa]"
                           }`}
                           data-testid={`mobile-nav-${link.path === "/" ? "home" : link.path.slice(1)}`}
                         >
                           {link.label}
                         </Link>
-                      )
-                    ))}
+                      ),
+                    )}
                   </nav>
                   <Link to="/contact" className="block mt-6">
-                    <Button className="w-full bg-[#1ab69e] hover:bg-[#149380] text-white font-semibold rounded-full" data-testid="mobile-cta-button">
+                    <Button
+                      className="w-full bg-[#1ab69e] hover:bg-[#149380] text-white font-semibold rounded-full"
+                      data-testid="mobile-cta-button"
+                    >
                       Get Started
                     </Button>
                   </Link>
