@@ -84,7 +84,7 @@ export default function HomePage() {
             initial={{ opacity: 0, y: 60 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="max-w-2xl"
+            className="max-w-4xl"
           >
             <span className="uppercase tracking-[0.2em] text-xs font-bold text-[#1ab69e] font-body" data-testid="hero-overline">
               EYESAP Technology
@@ -93,7 +93,7 @@ export default function HomePage() {
               Let's Grow Together by Empowering Futures Through{" "}
               <span className="text-[#1ab69e]">IT Excellence</span>
             </h1>
-            <p className="text-slate-300 text-base sm:text-lg font-body mt-6 leading-relaxed max-w-lg" data-testid="hero-subtitle">
+            <p className="text-slate-300 text-base sm:text-lg font-body mt-6 leading-relaxed max-w-2xl" data-testid="hero-subtitle">
               Full-service IT consulting specializing in SAP Implementation, Staffing, and Professional Training for enterprises of all sizes.
             </p>
             <div className="flex flex-wrap gap-4 mt-8">

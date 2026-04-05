@@ -17,6 +17,7 @@ const navLinks = [
   },
   { label: "About Us", path: "/about" },
   { label: "Blogs", path: "/blogs" },
+  { label: "Careers", path: "/careers" },
   { label: "Contact", path: "/contact" },
 ];
 
@@ -35,6 +36,8 @@ export default function Navbar() {
   useEffect(() => { setMobileOpen(false); setServicesOpen(false); }, [location]);
 
   const isActive = (path) => location.pathname === path;
+  const isHeroPage = !scrolled;
+  const isTransparent = !scrolled && isHeroPage;
 
   return (
     <motion.header
@@ -56,8 +59,8 @@ export default function Navbar() {
               <span className="text-white font-heading font-black text-lg">E</span>
             </div>
             <div>
-              <span className="font-heading font-black text-xl text-[#0F172A] tracking-tight">EYESAP</span>
-              <span className="block text-[10px] uppercase tracking-[0.2em] text-[#64748B] font-body -mt-1">Technology</span>
+              <span className={`font-heading font-black text-xl tracking-tight transition-colors ${isTransparent ? "text-white" : "text-[#0F172A]"}`}>EYESAP</span>
+              <span className={`block text-[10px] uppercase tracking-[0.2em] font-body -mt-1 transition-colors ${isTransparent ? "text-white/70" : "text-[#64748B]"}`}>Technology</span>
             </div>
           </Link>
 
@@ -67,8 +70,10 @@ export default function Navbar() {
               link.children ? (
                 <div key={link.label} className="relative group">
                   <button
-                    className={`flex items-center gap-1 px-4 py-2 text-sm font-body font-medium transition-colors rounded-lg hover:bg-[#f0fdfa] ${
-                      link.children.some(c => isActive(c.path)) ? "text-[#1ab69e]" : "text-[#334155]"
+                    className={`flex items-center gap-1 px-4 py-2 text-sm font-body font-medium transition-colors rounded-lg ${
+                      isTransparent ? "hover:bg-white/10" : "hover:bg-[#f0fdfa]"
+                    } ${
+                      link.children.some(c => isActive(c.path)) ? "text-[#1ab69e]" : isTransparent ? "text-white" : "text-[#334155]"
                     }`}
                     data-testid="services-dropdown"
                   >
@@ -98,8 +103,10 @@ export default function Navbar() {
                 <Link
                   key={link.path}
                   to={link.path}
-                  className={`px-4 py-2 text-sm font-body font-medium transition-colors rounded-lg hover:bg-[#f0fdfa] ${
-                    isActive(link.path) ? "text-[#1ab69e]" : "text-[#334155]"
+                  className={`px-4 py-2 text-sm font-body font-medium transition-colors rounded-lg ${
+                    isTransparent ? "hover:bg-white/10" : "hover:bg-[#f0fdfa]"
+                  } ${
+                    isActive(link.path) ? "text-[#1ab69e]" : isTransparent ? "text-white" : "text-[#334155]"
                   }`}
                   data-testid={`nav-${link.path === "/" ? "home" : link.path.slice(1)}`}
                 >
@@ -123,8 +130,8 @@ export default function Navbar() {
             {/* Mobile Menu */}
             <Sheet open={mobileOpen} onOpenChange={setMobileOpen}>
               <SheetTrigger asChild className="lg:hidden">
-                <button className="p-2 rounded-lg hover:bg-slate-100" data-testid="mobile-menu-toggle">
-                  <Menu className="w-6 h-6 text-[#0F172A]" />
+                <button className={`p-2 rounded-lg ${isTransparent ? "hover:bg-white/10" : "hover:bg-slate-100"}`} data-testid="mobile-menu-toggle">
+                  <Menu className={`w-6 h-6 ${isTransparent ? "text-white" : "text-[#0F172A]"}`} />
                 </button>
               </SheetTrigger>
               <SheetContent side="right" className="w-80 bg-white p-0">

@@ -9,6 +9,7 @@ const footerLinks = {
   ],
   company: [
     { label: "About Us", path: "/about" },
+    { label: "Careers", path: "/careers" },
     { label: "Blogs", path: "/blogs" },
     { label: "Contact", path: "/contact" },
   ],
@@ -99,6 +100,12 @@ export default function Footer() {
             &copy; {new Date().getFullYear()} EYESAP Technology. All rights reserved.
           </p>
           <div className="flex gap-6">
+            <Link to="/privacy-policy" className="text-slate-500 hover:text-slate-300 text-xs font-body transition-colors" data-testid="footer-privacy-link">
+              Privacy Policy
+            </Link>
+            <Link to="/terms" className="text-slate-500 hover:text-slate-300 text-xs font-body transition-colors" data-testid="footer-terms-link">
+              Terms & Conditions
+            </Link>
             <Link to="/admin/login" className="text-slate-500 hover:text-slate-300 text-xs font-body transition-colors" data-testid="footer-admin-link">
               Admin
             </Link>
