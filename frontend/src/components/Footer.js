@@ -24,10 +24,9 @@ export default function Footer() {
           <div className="lg:col-span-1">
             <div className="flex items-center mb-6">
               <img
-                src="https://customer-assets.emergentagent.com/job_eyesap-consulting/artifacts/hd2hxzv6_Gemini_Generated_Image_x8aekhx8aekhx8ae.png"
+                src="https://customer-assets.emergentagent.com/job_eyesap-consulting/artifacts/uooqvbnr_Picsart_26-04-05_14-15-21-768.png"
                 alt="EYESAP Technology"
-                className="h-14 w-auto rounded-lg"
-                style={{ mixBlendMode: 'screen' }}
+                className="h-16 w-auto"
               />
             </div>
             <p className="text-slate-400 text-sm font-body leading-relaxed max-w-xs">

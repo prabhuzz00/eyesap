@@ -56,10 +56,10 @@ export default function Navbar() {
           {/* Logo */}
           <Link to="/" className="flex items-center" data-testid="logo-link">
             <img
-              src="https://customer-assets.emergentagent.com/job_eyesap-consulting/artifacts/hd2hxzv6_Gemini_Generated_Image_x8aekhx8aekhx8ae.png"
+              src="https://customer-assets.emergentagent.com/job_eyesap-consulting/artifacts/uooqvbnr_Picsart_26-04-05_14-15-21-768.png"
               alt="EYESAP Technology"
-              className="h-12 w-auto rounded-lg"
-              style={{ mixBlendMode: isTransparent ? 'screen' : 'multiply' }}
+              className="h-14 w-auto"
+              style={{ mixBlendMode: 'screen' }}
             />
           </Link>
 
@@ -137,9 +137,9 @@ export default function Navbar() {
                 <div className="p-6">
                   <div className="flex items-center mb-8">
                     <img
-                      src="https://customer-assets.emergentagent.com/job_eyesap-consulting/artifacts/hd2hxzv6_Gemini_Generated_Image_x8aekhx8aekhx8ae.png"
+                      src="https://customer-assets.emergentagent.com/job_eyesap-consulting/artifacts/uooqvbnr_Picsart_26-04-05_14-15-21-768.png"
                       alt="EYESAP Technology"
-                      className="h-12 w-auto rounded-lg"
+                      className="h-14 w-auto"
                     />
                   </div>
                   <nav className="space-y-1">
