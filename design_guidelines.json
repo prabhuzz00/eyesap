@@ -1,0 +1,107 @@
+{
+  "project_name": "EYESAP TECHNOLOGY",
+  "domain": "IT Consulting, SAP Implementation, Staffing & Training",
+  "theme": "light",
+  "archetype": "4 (Swiss & High-Contrast)",
+  "emotional_tone": "Professional, authoritative, reliable, modern, growth-oriented",
+  "colors": {
+    "background": {
+      "primary": "#FFFFFF",
+      "secondary": "#F8FAFC",
+      "tertiary": "#F1F5F9"
+    },
+    "text": {
+      "primary": "#0F172A",
+      "secondary": "#334155",
+      "muted": "#64748B"
+    },
+    "brand": {
+      "primary": "#1ab69e",
+      "hover": "#149380",
+      "light": "#f0fdfa",
+      "muted": "#ccfbf1"
+    },
+    "border": {
+      "default": "#E2E8F0",
+      "focus": "#1ab69e"
+    }
+  },
+  "typography": {
+    "fonts": {
+      "headings": "Cabinet Grotesk, sans-serif",
+      "body": "Satoshi, sans-serif",
+      "mono": "JetBrains Mono, monospace"
+    },
+    "import_url": "https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@800,500,700,400,900&f[]=satoshi@900,700,500,300,400&display=swap",
+    "rules": {
+      "h1": "text-4xl sm:text-5xl lg:text-6xl tracking-tighter font-black",
+      "h2": "text-2xl sm:text-3xl lg:text-4xl tracking-tight font-bold",
+      "h3": "text-xl sm:text-2xl tracking-tight font-semibold",
+      "body": "text-base leading-relaxed",
+      "overline": "uppercase tracking-[0.2em] text-xs font-bold text-[#1ab69e]"
+    }
+  },
+  "spacing_and_layout": {
+    "container_padding": "px-6 md:px-12 lg:px-24",
+    "section_spacing": "py-24 lg:py-32",
+    "grid_gap": "gap-8 lg:gap-12",
+    "card_padding": "p-8 lg:p-10",
+    "border_radius": "rounded-2xl"
+  },
+  "surface_strategies": {
+    "header": "Crystal Glass: backdrop-blur-xl bg-white/80 border-b border-slate-200/50 shadow-sm",
+    "cards": "Flat background (bg-white), 1px subtle border (border-slate-200), transition-all hover:shadow-lg hover:-translate-y-1",
+    "hero_overlay": "Gradient overlay for text contrast: bg-gradient-to-r from-slate-900/80 via-slate-900/40 to-transparent",
+    "buttons": "Solid: bg-[#1ab69e] text-white hover:bg-[#149380] font-semibold. Outline: border-2 border-[#1ab69e] text-[#1ab69e] hover:bg-[#f0fdfa]"
+  },
+  "motion_and_interactions": {
+    "global": "Lenis for smooth scrolling. (npm install lenis)",
+    "hover": "transition-all duration-300 ease-out",
+    "scroll_reveal": "Framer Motion: initial opacity-0 translate-y-8, whileInView opacity-100 translate-y-0, viewport once",
+    "stagger": "Lists and bento grids must stagger children on entrance"
+  },
+  "components": {
+    "marketing": {
+      "strategy": "Custom pure HTML + Tailwind for structural layouts. Avoid Shadcn Cards for creative sections to maintain high-end flexibility.",
+      "hero": "Parallax image background with Framer Motion scroll transforms. Left-aligned bold typography. Tagline prominent.",
+      "services_grid": "Bento Grid (Mode A: The Tetris Grid) combining squares, talls, and hero spans. Avoid generic 3-column bootstrap layout.",
+      "marquee": "React Fast Marquee for 'Our Clients/Partners' - slow, smooth, monochrome logos."
+    },
+    "interactive": {
+      "strategy": "Shadcn UI heavily customized to match the brand.",
+      "forms": "Shadcn Form, Input, Textarea for Contact Us and Admin Login.",
+      "navigation": "Sticky header (Crystal Glass) with clear navigation links on desktop, Shadcn Sheet for mobile.",
+      "tabs": "Use Shadcn Tabs for switching between SAP Implementation, Staffing, and Training if displayed in a single section, or separate pages depending on routing."
+    }
+  },
+  "media": {
+    "hero_image": {
+      "url": "https://images.unsplash.com/photo-1765696300043-142687b6b4a7?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1MDZ8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBnbGFzcyUyMG9mZmljZSUyMGJ1aWxkaW5nJTIwZGF5bGlnaHR8ZW58MHx8fHwxNzc1Mzc1MjczfDA&ixlib=rb-4.1.0&q=85",
+      "description": "Modern glass office building against blue sky. Use in Hero section with parallax and dark gradient overlay for text readability."
+    },
+    "sap_implementation": {
+      "url": "https://images.unsplash.com/photo-1644325349124-d1756b79dd42?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Njl8MHwxfHNlYXJjaHwxfHxhYnN0cmFjdCUyMGRpZ2l0YWwlMjBkYXRhJTIwbmV0d29ya3xlbnwwfHx8fDE3NzUzNzUyNzJ8MA&ixlib=rb-4.1.0&q=85",
+      "description": "Abstract blue/teal digital data network. Use in SAP Implementation section."
+    },
+    "sap_staffing": {
+      "url": "https://images.unsplash.com/photo-1758518731706-be5d5230e5a5?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2OTF8MHwxfHNlYXJjaHwxfHxjb3Jwb3JhdGUlMjBidXNpbmVzcyUyMHRlYW0lMjBtZWV0aW5nfGVufDB8fHx8MTc3NTM3NTI2MXww&ixlib=rb-4.1.0&q=85",
+      "description": "Diverse business team collaborating. Use in SAP Staffing & Resourcing section."
+    },
+    "sap_training": {
+      "url": "https://images.pexels.com/photos/1970801/pexels-photo-1970801.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "description": "Person focused on computer screen. Use in SAP Training section."
+    }
+  },
+  "instructions_to_main_agent": [
+    "Include <link href=\"https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@800,500,700,400,900&f[]=satoshi@900,700,500,300,400&display=swap\" rel=\"stylesheet\"> in your index.html.",
+    "Install and setup 'lucide-react' for icons, 'framer-motion' for animations, 'react-fast-marquee' for scrolling elements, and 'lenis' for smooth scrolling.",
+    "Configure tailwind.config.js to use Cabinet Grotesk for sans (or custom heading font) and Satoshi for body, and extend the colors with the provided teal (#1ab69e) palette.",
+    "Build a 5-tab navigation: Introduction/Contact, SAP Implementation, SAP Staffing & Resourcing, SAP Training, Blogs.",
+    "Implement a Parallax Hero Section using the provided hero_image URL and Framer Motion.",
+    "Create a clean Bento grid layout for the services (SAP Implementation, Staffing, Training) emphasizing the #1ab69e accent color.",
+    "Ensure all interactive elements have 'data-testid' attributes (e.g., data-testid='contact-submit-button').",
+    "For the Blog CMS with Admin Panel, build the frontend routes and forms, mock the backend data if no DB is provided, but ensure the UI flow (Admin Login -> Dashboard -> Manage Blogs) is fully designed.",
+    "Follow the High-Contrast Swiss Archetype: Keep layouts asymmetric, use generous negative space (e.g., py-24, gap-12), and avoid center-aligning everything.",
+    "Use the provided image URLs exclusively. Do not use placeholder services like via.placeholder.com."
+  ]
+}
