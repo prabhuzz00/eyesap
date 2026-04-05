@@ -54,14 +54,13 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-24">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-3" data-testid="logo-link">
-            <div className="w-10 h-10 rounded-xl bg-[#1ab69e] flex items-center justify-center">
-              <span className="text-white font-heading font-black text-lg">E</span>
-            </div>
-            <div>
-              <span className={`font-heading font-black text-xl tracking-tight transition-colors ${isTransparent ? "text-white" : "text-[#0F172A]"}`}>EYESAP</span>
-              <span className={`block text-[10px] uppercase tracking-[0.2em] font-body -mt-1 transition-colors ${isTransparent ? "text-white/70" : "text-[#64748B]"}`}>Technology</span>
-            </div>
+          <Link to="/" className="flex items-center" data-testid="logo-link">
+            <img
+              src="https://customer-assets.emergentagent.com/job_eyesap-consulting/artifacts/hd2hxzv6_Gemini_Generated_Image_x8aekhx8aekhx8ae.png"
+              alt="EYESAP Technology"
+              className="h-12 w-auto rounded-lg"
+              style={{ mixBlendMode: isTransparent ? 'screen' : 'multiply' }}
+            />
           </Link>
 
           {/* Desktop Nav */}
@@ -136,11 +135,12 @@ export default function Navbar() {
               </SheetTrigger>
               <SheetContent side="right" className="w-80 bg-white p-0">
                 <div className="p-6">
-                  <div className="flex items-center gap-3 mb-8">
-                    <div className="w-10 h-10 rounded-xl bg-[#1ab69e] flex items-center justify-center">
-                      <span className="text-white font-heading font-black text-lg">E</span>
-                    </div>
-                    <span className="font-heading font-black text-xl text-[#0F172A]">EYESAP</span>
+                  <div className="flex items-center mb-8">
+                    <img
+                      src="https://customer-assets.emergentagent.com/job_eyesap-consulting/artifacts/hd2hxzv6_Gemini_Generated_Image_x8aekhx8aekhx8ae.png"
+                      alt="EYESAP Technology"
+                      className="h-12 w-auto rounded-lg"
+                    />
                   </div>
                   <nav className="space-y-1">
                     {navLinks.map((link) => (

@@ -22,14 +22,13 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
           {/* Brand */}
           <div className="lg:col-span-1">
-            <div className="flex items-center gap-3 mb-6">
-              <div className="w-10 h-10 rounded-xl bg-[#1ab69e] flex items-center justify-center">
-                <span className="text-white font-heading font-black text-lg">E</span>
-              </div>
-              <div>
-                <span className="font-heading font-black text-xl text-white tracking-tight">EYESAP</span>
-                <span className="block text-[10px] uppercase tracking-[0.2em] text-slate-400 font-body -mt-1">Technology</span>
-              </div>
+            <div className="flex items-center mb-6">
+              <img
+                src="https://customer-assets.emergentagent.com/job_eyesap-consulting/artifacts/hd2hxzv6_Gemini_Generated_Image_x8aekhx8aekhx8ae.png"
+                alt="EYESAP Technology"
+                className="h-14 w-auto rounded-lg"
+                style={{ mixBlendMode: 'screen' }}
+              />
             </div>
             <p className="text-slate-400 text-sm font-body leading-relaxed max-w-xs">
               Empowering Futures Through IT Excellence. Your trusted partner for SAP implementation, staffing, and training.
